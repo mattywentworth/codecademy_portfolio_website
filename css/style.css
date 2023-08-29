@@ -1,0 +1,318 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    
+    font-size: 16px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header */
+
+header {
+    font-family: "Source Code Pro"; /* Look up what fonts go well together */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+    background-color:antiquewhite;
+    width: 100%;
+}
+
+#logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 2rem;
+}
+
+nav {
+    width: 20rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.25rem;
+}
+
+nav li {
+    list-style-type: none;
+    font-size: 1.2rem;
+}
+
+nav a:hover {
+    font-weight: 700;
+}
+
+nav a:active {
+    border-bottom: 2px solid black;
+}
+
+@media only screen and (max-width: 420px) {
+
+    nav ul {
+        flex-direction: column;
+        text-align: right;
+    }
+    
+    nav li {
+        font-size: 1rem;
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+    }    
+}
+
+/* Main */
+
+main {
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+    top: 120px;
+    z-index: 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 2.5rem;
+    margin-bottom: 7.5rem;
+}
+
+#about {
+    display: flex;
+    justify-content: space-between;
+    /* width: 100%; */
+}
+
+#about-left {
+    width: 50%;
+}
+
+.about-section {
+    padding-bottom: 2.5rem;
+}
+
+.about-section p {
+    padding-top: 0.5rem;
+    line-height: 1.3;
+}
+
+#about-right {
+    width: 40%;
+}
+
+#headshot-1 {
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+}
+
+#language-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*.language-section-col {
+    background-color: lightgrey; 
+}*/
+
+.language-icons {
+    display: flex;
+    align-items: center;
+}
+
+.language-icons img {
+    width: 50px;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+@media only screen and (max-width: 960px) {
+    
+    #language-section {
+        flex-direction: column;
+    }
+
+    .language-section-col {
+        padding-bottom: 2.5rem;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+
+    #about {
+        flex-direction: column;
+    }
+
+    #about-left, #about-right {
+        width: 100%;
+    }
+
+    #about-right {
+        margin-bottom: 80px;
+    }
+
+    #headshot-1 {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    
+    main {
+        top: 120px;
+    }
+    
+    #headshot-1 {
+        width: 80%;
+    }
+}
+
+/* Footer */
+
+footer {
+    box-sizing: border-box;
+    position: sticky;
+    top: 100vh;
+    z-index: 2;
+    background-color: antiquewhite;
+    padding: 1.25rem;
+    width: 100%;
+    text-align: center;
+}
+
+/* For Work Page */
+
+#work-section {
+    padding-bottom: 2.5rem;
+}
+
+#work-section h1 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+/*#work-layout {
+    
+    display: flex;
+    justify-content: space-between;
+}*/
+
+.work-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+.work-unit {
+    width: 45%
+}
+
+.work-unit p {
+    line-height: 1.3;
+    padding-bottom: 0.5rem;
+}
+
+.work-unit a {
+    color:royalblue;
+    text-decoration: underline;
+}
+
+.work-unit a:hover {
+    color:darkblue;
+}
+
+.work-unit a:active {
+    font-weight: bold;
+}
+
+.work-image {
+    width: 60%;
+}
+
+/* .work-tech-used {
+    background-color: rgb(241, 241, 241);
+    font-family:'Courier New', Courier, monospace;
+    display: inline;
+    padding: 0px 2px;
+} */
+
+
+/* For Contact Page */
+
+#contact-matty, #contact-other {
+    padding-bottom: 3rem;
+}
+
+#contact-matty p, #contact-other p {
+    line-height: 1.5;
+}
+
+h1, h2 {
+    margin-bottom: 0.5rem;
+}
+
+#linkedin-info img, #linkedin-info p {
+    display: inline-block;
+}
+
+#linkedin-info a {
+    text-decoration: underline;
+}
+
+#linkedin-icon {
+    width: 1rem;
+}
+
+.contact-details {
+    margin: 1rem 1rem 1rem 0rem;
+}
+
+#random-email-button, #random-phone-button {
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+    padding: 0.75rem;
+    width: 20rem;
+    border-radius: 0;
+    color: white;
+    background-color:darkolivegreen;
+    font-size: 1rem;
+}
+
+#random-email-text, #random-phone-text {
+    margin-top: 0.5rem;
+}
+
+#random-email-text {
+    display: none;
+}
+
+#random-phone-text {
+    display: none;
+}
+
+@media only screen and (max-width: 420px) {
+
+    #random-email-button, #random-phone-button {
+        width: 15rem;
+        font-size: 0.75rem;
+        padding: 0.5rem;
+    }
+}
