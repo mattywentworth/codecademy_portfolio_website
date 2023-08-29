@@ -221,7 +221,8 @@ footer {
 }
 
 .work-unit {
-    width: 45%
+    width: 45%;
+    margin-bottom: 2rem;
 }
 
 .work-unit p {
@@ -229,21 +230,36 @@ footer {
     padding-bottom: 0.5rem;
 }
 
-.work-unit a {
+.work-unit a, .general-link {
     color:royalblue;
     text-decoration: underline;
 }
 
-.work-unit a:hover {
+.work-unit a:hover, .general-link:hover {
     color:darkblue;
 }
 
-.work-unit a:active {
+.work-unit a:active, .general-link:active {
     font-weight: bold;
 }
 
 .work-image {
-    width: 60%;
+    width: 400px;
+}
+
+@media only screen and (max-width: 960px) {
+
+    .work-row {
+        flex-direction: column;
+    }
+
+    .work-unit {
+        width: 100%;
+    }
+
+    .work-image {
+        width: 80%;
+    }
 }
 
 /* .work-tech-used {
@@ -262,6 +278,10 @@ footer {
 
 #contact-matty p, #contact-other p {
     line-height: 1.5;
+}
+
+#phone-number {
+    filter: blur(0.30rem);
 }
 
 h1, h2 {
